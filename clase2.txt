@@ -1,0 +1,7 @@
+¿que es una libreria? Una libreria es un conjunto reutilizable de funciones ya establecidas.
+¿que es un framework?:Un framework o banco de trabajo es una esctructura que define como debe organizarse y ejecutarse tu aplicacion (tu escribes el codig que encaja en las reglas de entrada que el framework recibe).
+react-anula-vue js
+Framewwor-Vue js:Vue js nos da un conjunto de carpetas y subcarpetas donde nos va a decir donde va a ir cada seccion respentando cada estrutura que nos da. se centra en la capa de ui(interfaz de usuario).
+Frontend: Es lo que se nos muestra en pantalla(ui).
+Backend: Es lo que no vemos,operaciones o logica de la app.
+IDE: Entorno de desarrollo integral.
