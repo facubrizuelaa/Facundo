@@ -1,34 +1,44 @@
 <template>
   <nav class="rs-nav">
-    <ul class="nav-list">
-      <li><a href="#" class="nav-link">Inicio</a></li>
-      <li><a href="#" class="nav-link">Productos</a></li>
-      <li><a href="#" class="nav-link">Contacto</a></li>
-    </ul>
-  </nav>
-  <header class="ricoseller-header">
-    
     <nav class="glass-pill-nav">
       <ul>
         <li><a href="#">Calzado</a></li>
         <li><a href="#">Indumentaria</a></li>
         <li><a href="#">Accesorios</a></li>
-        </ul>
+        <li class="search-divider"></li>
+        <li>
+          <button class="search-btn" aria-label="Buscar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </button>
+        </li>
+      </ul>
     </nav>
-  </header>
+  </nav>
 </template>
 
 <style scoped>
 .rs-nav {
   background: transparent;
-  padding: 20px;
+  padding: 16px 32px;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .nav-list {
   display: flex;
-  justify-content: center;
+  align-items: center;
   gap: 40px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-link {
@@ -43,20 +53,6 @@
 
 .nav-link:hover {
   opacity: 0.6;
-}
-.ricoseller-header {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 100;
-}
-
-.main-logo {
-  width: 50px;
-  filter: brightness(0) invert(1); /* Logo blanco */
 }
 
 .glass-pill-nav {
@@ -84,5 +80,33 @@
   font-weight: 500;
   text-transform: capitalize;
   letter-spacing: 0.5px;
+  transition: opacity 0.3s ease;
+}
+
+.glass-pill-nav a:hover {
+  opacity: 0.6;
+}
+
+/* Línea separadora antes del ícono */
+.search-divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.search-btn:hover {
+  opacity: 0.6;
 }
 </style>
