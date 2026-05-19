@@ -3,10 +3,10 @@
     
     <section class="brands-bar">
       <div class="brand-item">ADIDAS</div>
-      <div class="brand-item">CHAMPION</div>
-      <div class="brand-item active">CONVERSE</div>
+      <div class="brand-item">PUMA</div>
+      <div class="brand-item ">CONVERSE</div>
       <div class="brand-item">VANS</div>
-      <div class="brand-item">MIZUNO</div>
+      <div class="brand-item">NIKE</div>
     </section>
 
     <section class="categories-grid">
@@ -25,7 +25,7 @@
 
     <section class="sale-section">
       <div class="sale-frame">
-        <div class="sale-label">SALE</div>
+        <div class="sale-label">Destacados</div>
         
         <div class="products-row">
           <div class="product-card" v-for="i in 3" :key="i">
@@ -45,45 +45,53 @@
         </div>
       </div>
     </section>
+
+    
   </main>
 </template>
 
 <script setup>
 const categories = [
   { name: 'CALZADO' },
-  { name: 'COMPRESIÓN' },
+  { name: 'ACCESORIOS' },
   { name: 'INDUMENTARIA' }
 ];
 </script>
 
 <style scoped>
 .site-body {
-  background: var(--color-black); /* Cambiado a negro para que el traslúcido se note */
+  width: 100%;
+  min-height: 100vh; /* Asegura que cubra todo el alto de la pantalla */
+  background: #0b0c10; /* Tu color negro de fondo */
   color: var(--color-white);
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Categories Grid */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 350px;
+  width: 100%; /* ← Aseguramos que ocupe todo el ancho */
+  margin-top: -40px; 
 }
 
 /* 1. Brands Bar (Caja Amarilla con estilo de Caja Roja) */
 .brands-bar {
-  /* Fondo oscuro semi-transparente similar a la caja roja */
   background: rgba(255, 255, 255, 0.08); 
-  
-  /* Efecto Glassmorphism */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  
-  /* Forma de píldora y bordes */
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  
-  /* Alineación y Posicionamiento */
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 12px 40px;
-  margin: 20px auto;
+  margin: 100px auto 60px; /* ← el 60px es el margen inferior que separa del grid */
   max-width: 85%;
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 
 /* Ítems dentro de la barra */
@@ -103,12 +111,7 @@ const categories = [
 }
 
 /* 2. Categories Grid */
-.categories-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  height: 350px;
-  margin-top: -40px; /* Sutil solapamiento para estilo moderno */
-}
+
 
 .cat-card {
   position: relative;

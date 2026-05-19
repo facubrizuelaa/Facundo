@@ -53,6 +53,12 @@
 body {
   margin: 0;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Evita scrolls horizontales accidentales */
+}
 
 h1,
 h2 {
@@ -157,11 +163,11 @@ code {
 }
 
 #app {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
+  width: 100%; /* ← Cambiado de 1126px a 100% */
+  /* max-width: 100%; (Ya no es necesario) */
+  margin: 0; /* ← Quitamos el centrado */
   text-align: center;
-  border-inline: 1px solid var(--border);
+  /* border-inline: 1px solid var(--border);  ← Borra o comenta esto si no quieres las líneas de los costados */
   min-height: 100svh;
   display: flex;
   flex-direction: column;
